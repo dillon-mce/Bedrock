@@ -11,10 +11,12 @@ public extension Array where Element: Hashable {
 
     /// Returns a copy of the array with all duplicates removed. O(n) time complexity.
     func deduplicated() -> [Element] {
-        var dict: [Element: Bool] = [:]
+        var set: Set<Element> = []
 
         return filter {
-            dict.updateValue(true, forKey: $0) == nil
+            let isIncluded = !set.contains($0)
+            set.insert($0)
+            return isIncluded
         }
     }
 }
