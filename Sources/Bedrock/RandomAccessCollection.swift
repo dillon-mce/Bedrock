@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension RandomAccessCollection {
+public extension RandomAccessCollection {
     subscript(safe index: Index) -> Element? {
         guard indices.contains(index) else { return nil }
         return self[index]

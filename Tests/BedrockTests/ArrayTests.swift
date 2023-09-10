@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Bedrock
+import Bedrock
 
 class ArrayTests: XCTestCase {
 
